@@ -1,0 +1,284 @@
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Full width content styles */
+.full-width-content {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Make sure all pages extend to fill the viewport */
+.page-content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure all containers fill available space */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Left-aligned content container */
+.left-aligned-content {
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .left-aligned-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .left-aligned-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Fix for MainLayout to ensure full width */
+.flex-1 {
+  flex: 1 1 0% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Make sure main content areas take full width */
+main.flex-1, 
+.w-full,
+.page-container,
+.page-content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Remove any max-width constraints */
+.mx-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Ensure proper scrolling */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablist alignment */
+.tabs-left-aligned .TabsList {
+  justify-content: flex-start !important;
+}
+
+/* Chat page specific adjustments */
+.chat-page-container {
+  margin-top: 0.5cm !important;
+}
+
+/* Knowledge page specific styles */
+.knowledge-page {
+  background-color: #FFFFFF !important;
+}
+
+/* Landing page animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Button hover effects for landing page */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Improve spacing on mobile */
+  .p-4, .p-6, .p-8 {
+    padding: 1rem !important;
+  }
+  
+  /* Fix card layouts */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Adjust sidebar on mobile */
+  .ml-\[70px\] {
+    margin-left: 0 !important;
+  }
+  
+  /* Ensure full width for main content */
+  .md\:w-\[calc\(100vw-70px\)\],
+  .lg\:w-\[calc\(100vw-240px\)\] {
+    width: 100% !important;
+  }
+  
+  /* Fix overflow issues */
+  .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix chat container */
+  .chat-page-container {
+    height: calc(100vh - 64px) !important;
+  }
+  
+  /* Ensure headers don't overflow */
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+  
+  /* Fix padding for ticket items */
+  .ticket-item {
+    padding: 0.75rem !important;
+  }
+  
+  /* Improve charts responsiveness */
+  .recharts-responsive-container {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  
+  /* Landing page mobile fixes */
+  .landing-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .landing-cta button {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Fix registration pages on mobile */
+  .registration-container {
+    padding: 1rem !important;
+  }
+  
+  /* Ensure forms are easier to use on mobile */
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Add specific animation classes for landing page elements */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation delays for staggered animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Add smooth transition to all interactive elements */
+a, button, input, select, textarea {
+  transition: all 0.2s ease-in-out;
+}
